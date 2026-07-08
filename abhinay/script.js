@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Setup Typed.js
     const typed = new Typed('#typed-intro', {
         strings: [
-            'Hey Kavya...',
+            'Kavya Maaa...',
             'Someone made something^1000<br>just for you...'
         ],
         typeSpeed: 50,
