@@ -397,13 +397,12 @@ html.lenis {
 .memories-section {
     position: relative;
     width: 100vw;
-    height: 350vh; /* Scroll space for GSAP pinning */
+    height: 100vh;
     background-color: #070509;
 }
 
 .memory-container {
-    position: sticky;
-    top: 0;
+    position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -436,7 +435,7 @@ html.lenis {
 .memory-image-wrapper {
     flex: 1 1 45%;
     max-width: 480px;
-    min-width: 300px;
+    min-width: min(100%, 300px);
     perspective: 1000px;
     display: flex;
     justify-content: center;
@@ -460,8 +459,8 @@ html.lenis {
 
 .memory-text-wrapper {
     flex: 1 1 45%;
-    padding: 0 4rem;
-    min-width: 300px;
+    padding: 0 2rem;
+    min-width: min(100%, 300px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -483,7 +482,7 @@ html.lenis {
 
 .words-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 35px;
     margin-top: 40px;
 }
@@ -1142,7 +1141,8 @@ html.lenis {
     }
     
     .polaroid-wrapper {
-        min-height: 1400px;
+        min-height: auto;
+        padding-bottom: 2rem;
         flex-direction: column;
         gap: 40px;
     }
@@ -1189,6 +1189,17 @@ html.lenis {
     
     .final-text-2 {
         font-size: 4.2rem;
+    }
+    
+    .lightbox-close {
+        top: 20px;
+        right: 20px;
+        font-size: 2.5rem;
+    }
+    
+    .secret-close {
+        top: 15px;
+        right: 15px;
     }
 }
 
